@@ -68,13 +68,12 @@ nav a:hover {
 /* ===== Hero ===== */
 
 .hero {
-  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 80px 24px;
+  padding: 38px 24px 44px;
   background:
     radial-gradient(
       ellipse at 50% 70%,
@@ -104,7 +103,6 @@ nav a:hover {
 }
 
 .hero-link {
-  margin-top: 32px;
   color: var(--amber);
   border-bottom: 1px solid var(--amber);
   padding-bottom: 5px;
@@ -146,7 +144,6 @@ nav a:hover {
 
 .work-card {
   min-width: 0;
-  padding: 30px;
   border: 1px solid var(--line);
   background: var(--surface);
   border-radius: 8px;
@@ -226,9 +223,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .work-card {
-    padding: 22px;
-  }
 
   .section h2 {
     font-size: 1.9rem;
@@ -252,10 +246,10 @@ footer {
 }
 
 .hero-logo {
-  width: 170px;
-  height: 170px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-  margin-bottom: 22px;
+  margin-bottom: 6px;
 }
 
 /* Amber color variation */
@@ -269,340 +263,61 @@ footer {
 
 @media (max-width: 700px) {
   .hero-logo {
-    width: 140px;
-    height: 140px;
+    width: 68px;
+    height: 68px;
   }
 }
 
 
-/* ===== Hover Artwork Cards ===== */
+/* ===== Artwork and audio ===== */
 
 .work-card {
-  position: relative;
   overflow: hidden;
-  isolation: isolate;
-  min-height: 210px;
   display: flex;
-  align-items: flex-end;
-  background: var(--surface);
+  flex-direction: column;
 }
 
-/* Background artwork */
-
-.work-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-
-  background-image: var(--artwork);
-  background-position: center;
-  background-size: cover;
-
-  opacity: 0;
-  transform: scale(1.08);
-
-  transition:
-    opacity 0.45s ease,
-    transform 0.7s ease;
-}
-
-/* Dark overlay for text readability */
-
-.work-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-
-  background: linear-gradient(
-    to top,
-    rgba(12, 14, 17, 0.94) 0%,
-    rgba(12, 14, 17, 0.65) 55%,
-    rgba(12, 14, 17, 0.2) 100%
-  );
-
-  opacity: 0;
-  transition: opacity 0.45s ease;
-}
-
-.work-card:hover::before,
-.work-card:focus-within::before {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.work-card:hover::after,
-.work-card:focus-within::after {
-  opacity: 1;
+.work-artwork {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
 }
 
 .work-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.work-card:hover h3,
-.work-card:focus-within h3 {
-  color: #fff;
-}
-
-.work-card:hover p,
-.work-card:focus-within p {
-  color: #e0d7ca;
-}
-
-/* Touchscreen users can tap the player
-   to reveal the artwork */
-
-@media (hover: none) {
-  .work-card::before {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-
-  .work-card::after {
-    opacity: 1;
-  }
-}
-
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .work-card,
-  .work-card::before,
-  .work-card::after {
-    transition: none;
-  }
-}
-
-
-/* ===== Music Detail Modal ===== */
-
-.work-card {
-  cursor: pointer;
-}
-
-.music-modal {
-  width: min(90vw, 760px);
-  max-height: 85vh;
-  padding: 0;
-  overflow-y: auto;
-  background: #242526;
-  color: var(--ivory);
-  border: 1px solid var(--amber);
-  border-radius: 12px;
-  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.6);
-}
-
-.music-modal::backdrop {
-  background: rgba(8, 9, 12, 0.72);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-}
-
-.music-modal[open] {
-  animation: modal-appear 0.3s ease-out;
-}
-
-@keyframes modal-appear {
-  from {
-    opacity: 0;
-    transform: translateY(16px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.modal-artwork {
-  height: 270px;
-  background-size: cover;
-  background-position: center;
-}
-
-.modal-content {
-  padding: 30px 36px 38px;
-}
-
-.modal-label {
-  color: var(--amber);
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-}
-
-.modal-content h2 {
-  font-family: Georgia, serif;
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 8px 0;
-}
-
-.modal-genre {
-  color: var(--amber);
-  font-size: 0.85rem;
-}
-
-#modal-description {
-  color: var(--muted);
-  line-height: 1.9;
-  margin: 24px 0;
-}
-
-#modal-audio {
-  width: 100%;
-}
-
-.modal-close {
-  position: sticky;
-  top: 12px;
-  float: right;
-  margin: 12px 12px -50px 0;
-  z-index: 2;
-  width: 38px;
-  height: 38px;
-  background: rgba(20, 20, 20, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-close:hover {
-  border-color: var(--amber);
-  color: var(--amber);
-}
-
-@media (max-width: 700px) {
-  .modal-artwork {
-    height: 190px;
-  }
-
-  .modal-content {
-    padding: 24px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .music-modal[open] {
-    animation: none;
-  }
-}
-
-
-/* ===== Gallery Play Indicator ===== */
-
-.play-indicator {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 46px;
-  height: 46px;
-
-  color: var(--amber);
-  border: 1px solid var(--amber);
-  border-radius: 50%;
-
-  font-size: 17px;
-  padding-left: 3px;
-
-  transition:
-    background 0.25s,
-    color 0.25s,
-    transform 0.25s;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(16px, 3vw, 30px);
 }
 
-.work-card:hover .play-indicator,
-.work-card:focus-visible .play-indicator {
-  background: var(--amber);
-  color: var(--bg);
-  transform: scale(1.08);
+.work-card .track-meta,
+.work-card .track-scene {
+  margin: 4px 0 0;
 }
 
-.work-card:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 3px;
+.work-card .track-scene {
+  color: var(--ivory);
+  font-weight: 600;
 }
 
-
-
-/* ===== Always Visible Gallery Artwork ===== */
-
-.work-card::before {
-  opacity: 0.65;
-  transform: scale(1);
+.work-card .track-description {
+  margin: 8px 0 18px;
 }
 
-.work-card::after {
-  opacity: 1;
-  background: linear-gradient(
-    to top,
-    rgba(12, 14, 17, 0.92) 0%,
-    rgba(12, 14, 17, 0.55) 55%,
-    rgba(12, 14, 17, 0.15) 100%
-  );
+.work-card audio {
+  margin-top: auto;
+  min-height: 44px;
 }
 
-.work-card:hover::before,
-.work-card:focus-within::before {
-  opacity: 1;
-  transform: scale(1.04);
+.work-card .track-error {
+  margin: 6px 0 0;
 }
 
-
-/* ===== Cinematic Modal Artwork ===== */
-
-.music-modal {
-  background: #242526;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .work-card { transition: none; }
 }
-
-.modal-artwork {
-  height: 350px;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Image fades into the content background */
-
-.modal-artwork::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(36, 37, 38, 0) 35%,
-    rgba(36, 37, 38, 0.25) 55%,
-    rgba(36, 37, 38, 0.8) 80%,
-    #242526 100%
-  );
-}
-
-/* Pull text upward into the fading artwork */
-
-.modal-content {
-  position: relative;
-  z-index: 1;
-  margin-top: -75px;
-  padding: 0 36px 40px;
-}
-
-@media (max-width: 700px) {
-  .modal-artwork {
-    height: 270px;
-  }
-
-  .modal-content {
-    margin-top: -55px;
-    padding: 0 24px 30px;
-  }
-}
-
 
 /* ===== Commissions ===== */
 
@@ -794,4 +509,74 @@ footer {
   font-size: 0.8rem;
   min-height: 1.5em;
   margin: 0;
+}
+
+/* Commission information */
+.commission-note { color: var(--muted); font-size: 1rem; }
+.commissions-intro { font-size: 1rem; }
+.commission-details p, .service-item p { font-size: 1rem; }
+.commission-block { margin-top: 56px; }
+.commission-block > h3 { font-size: 1.25rem; font-weight: 500; margin: 0 0 20px; }
+.commission-specs { margin: 24px 0 0; }
+.commission-specs > div { padding: 20px 0; border-top: 1px solid var(--line); }
+.commission-specs dt { color: var(--ivory); font-weight: 600; margin-bottom: 8px; }
+.commission-specs dd { margin: 0; color: var(--muted); }
+.commission-flow { padding-left: 1.6rem; margin: 0; }
+.commission-flow li { padding: 0 0 22px 12px; }
+.commission-flow li::marker { color: var(--amber); }
+.commission-flow h4 { margin: 0 0 6px; font-size: 1rem; font-weight: 600; }
+.commission-flow p { color: var(--muted); margin: 0; }
+.commission-terms { border-top: 1px solid var(--line); padding-top: 32px; }
+.commission-terms ul { padding-left: 1.3rem; color: var(--muted); }
+.commission-terms li { margin-bottom: 14px; }
+.inquiry-guide { background: var(--surface); padding: 28px 32px; border-radius: 8px; }
+.inquiry-guide > p { color: var(--muted); }
+#inquiry-template { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; color: var(--ivory); user-select: text; }
+.template-button { font: inherit; padding: 10px 16px; background: transparent; color: var(--amber); border: 1px solid var(--amber); border-radius: 4px; cursor: pointer; }
+.template-button:hover { background: var(--bg); }
+.copy-status { min-height: 1.8em; margin-bottom: 0; font-size: .9rem; }
+.contact-button:focus-visible, .template-button:focus-visible, #copy-email:focus-visible { outline: 2px solid var(--ivory); outline-offset: 5px; }
+@media (max-width: 700px) {
+  .inquiry-guide { padding: 24px 20px; }
+  .service-item { flex-wrap: wrap; }
+  .service-price { font-size: 1rem; }
+  .template-button { width: 100%; }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 12px;
+}
+
+.hero > p {
+  margin: 4px 0;
+}
+
+#works {
+  padding-top: 36px;
+}
+
+#inquiry {
+  scroll-margin-top: 24px;
+}
+
+.inquiry-guide .commission-contact {
+  margin-top: 20px;
+}
+
+.commission-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 20px;
+}
+
+.commission-actions a:not(.contact-button) {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }

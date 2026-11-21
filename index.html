@@ -33,9 +33,11 @@
         <h1>SoundLantern</h1>
         <p>物語に、音楽という灯りを。</p>
 
-        <a href="#works" class="hero-link">
-            Explore the Music ↓
-        </a>
+        <p class="hero-service">ゲーム・映像向けのオリジナルBGMを制作します。</p>
+        <div class="hero-actions">
+          <a class="contact-button" href="#works">楽曲を試聴</a>
+          <a class="hero-link" href="#contact">制作を相談</a>
+        </div>
     </section>
 
 
@@ -44,70 +46,52 @@
       <p>制作した楽曲の一部をご紹介します。</p>
 
      
-    <div class="works-grid">
-        <!---
-        <article class="work-card" data-track="epic3" style="--artwork: url('images/epic3.png')">
-            <div class="work-content">
-            <h3>Epic3</h3>
-            <p>Epic / Cinematic Orchestral</p>
-            <span class="play-indicator" aria-hidden="true">
-            ▶
-            </span>
-            </div>
+      <div class="works-grid">
+        <article class="work-card">
+          <img class="work-artwork" src="images/epic3.png" alt="">
+          <div class="work-content">
+            <h3>The Civilizations</h3>
+            <p class="track-meta">Epic / Cinematic Orchestral · 4:11</p>
+            <p class="track-scene">冒険・戦闘・クライマックス</p>
+            <p class="track-description">壮大なオーケストラによるシネマティック楽曲。冒険や戦闘、物語のクライマックスを想定。</p>
+            <audio controls preload="none" src="audio/The_Civilizations.mp3" aria-label="The Civilizationsを試聴"></audio>
+            <p class="track-error" role="status" hidden>音源を読み込めませんでした。</p>
+          </div>
         </article>
-    -->
-        <!--
-
-        <article class="work-card" data-track="central_square" style="--artwork: url('images/central_square.png')">
-            <div class="work-content">
+        <article class="work-card">
+          <img class="work-artwork" src="images/central_square.png" alt="">
+          <div class="work-content">
             <h3>Central Square</h3>
-            <p>Fantasy / Town</p>
-            <span class="play-indicator" aria-hidden="true">
-            ▶
-            </span>
-            </div>
+            <p class="track-meta">Fantasy / Town · 2:47</p>
+            <p class="track-scene">街・拠点・穏やかな探索</p>
+            <p class="track-description">幻想的な街の中央広場をイメージしたBGM。穏やかな日常と、少し不思議な世界観を表現。</p>
+            <audio controls preload="none" src="audio/Central_Square.mp3" aria-label="Central Squareを試聴"></audio>
+            <p class="track-error" role="status" hidden>音源を読み込めませんでした。</p>
+          </div>
         </article>
-    -->
-
-        <article class="work-card" data-track="walking_day" style="--artwork: url('images/walking_day.png')">
-            <div class="work-content">
+        <article class="work-card">
+          <img class="work-artwork" src="images/walking_day.png" alt="">
+          <div class="work-content">
             <h3>Walking Day</h3>
-            <p>Daily / Heartwarming</p>
-            <span class="play-indicator" aria-hidden="true">
-            ▶
-            </span>
-            </div>
+            <p class="track-meta">Daily / Heartwarming · 1:58</p>
+            <p class="track-scene">街歩き・日常・穏やかな会話</p>
+            <p class="track-description">明るく温かい日常をイメージした楽曲。散歩や街歩き、穏やかな会話シーンなどに。</p>
+            <audio controls preload="none" src="audio/walking_day.mp3" aria-label="Walking Dayを試聴"></audio>
+            <p class="track-error" role="status" hidden>音源を読み込めませんでした。</p>
+          </div>
         </article>
-
-        <article class="work-card" data-track="church" style="--artwork: url('images/church.png')">
-            <div class="work-content">
+        <article class="work-card">
+          <img class="work-artwork" src="images/church.png" alt="">
+          <div class="work-content">
             <h3>Church</h3>
-            <p>Sacred / Classical</p>
-            <span class="play-indicator" aria-hidden="true">
-            ▶
-            </span>
-            </div>
+            <p class="track-meta">Sacred / Classical · 2:39</p>
+            <p class="track-scene">礼拝堂・厳かな場面</p>
+            <p class="track-description">バッハのコラールに着想を得た、教会をイメージした楽曲。荘厳で落ち着いた雰囲気。</p>
+            <audio controls preload="none" src="audio/church.mp3" aria-label="Churchを試聴"></audio>
+            <p class="track-error" role="status" hidden>音源を読み込めませんでした。</p>
+          </div>
         </article>
-
-        <!--
-        <article class="work-card"
-        data-track="creeping_shadows"
-        style="--artwork: url('images/creeping_shadows.png')">
-
-        <div class="work-content">
-            <h3>Creeping Shadows</h3>
-            <p>Suspense / Stealth / Electronic</p>
-
-            <span class="play-indicator" aria-hidden="true">
-            ▶
-            </span>
-        </div>
-        </article>
-    -->
-
-
-    </div>
-
+      </div>
     </section>
 
   
@@ -146,97 +130,88 @@
 
 
 
-    <section id="contact" class="section commissions">
+    <section id="contact" class="section commissions" aria-labelledby="commissions-title">
+      <p class="section-label">WORK WITH SOUNDLANTERN</p>
+      <h2 id="commissions-title">音楽制作のご依頼</h2>
+      <p class="commissions-intro">ゲーム・映像・物語の世界観に寄り添う、オリジナルBGMを制作します。<br>相談・お見積もりのみでも、お気軽にお問い合わせください。</p>
 
-    <p class="section-label">WORK WITH SOUNDLANTERN</p>
-    <h2>Commissions</h2>
-    <p class="commissions-intro">
-        ゲーム・映像・物語の世界観に寄り添う、
-        オリジナル音楽を制作します。
-    </p>
-
-    <div class="service-list">
-
+      <div class="service-list">
         <div class="service-item">
-        <div>
-            <h3>Original BGM</h3>
-            <p>ゲーム・映像向けオリジナル楽曲制作</p>
+          <div><h3>オリジナルBGM制作</h3><p>ゲーム・映像・物語向けの音楽を、1曲から。</p></div>
+          <span class="service-price">1曲 ¥10,000〜</span>
         </div>
-        <span class="service-price">¥10,000〜</span>
-        </div>
+      </div>
+      <p class="commission-note">料金は曲の長さ・編成・用途・納期に応じてお見積もりします。大編成のオーケストラや複数曲の制作も、内容とスケジュールを確認してご案内します。</p>
 
-        <div class="service-item">
-        <div>
-            <h3>Orchestral Arrangement</h3>
-            <p>オーケストラ編曲・MIDI打ち込み</p>
-        </div>
-        <span class="service-price">要相談</span>
-        </div>
+      <div class="commission-actions">
+        <a class="contact-button" href="mailto:soundlantern.music@gmail.com?subject=SoundLantern%20%E6%A5%BD%E6%9B%B2%E5%88%B6%E4%BD%9C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=%E3%81%94%E4%BE%9D%E9%A0%BC%E8%80%85%E5%90%8D%EF%BC%8F%E5%9B%A3%E4%BD%93%E5%90%8D%EF%BC%9A%0A%E4%BD%9C%E5%93%81%E3%81%AE%E6%A6%82%E8%A6%81%E3%83%BB%E9%9F%B3%E6%A5%BD%E3%81%AE%E4%BD%BF%E7%94%A8%E7%94%A8%E9%80%94%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E3%81%99%E3%82%8B%E6%9B%B2%E6%95%B0%E3%81%A8%E9%95%B7%E3%81%95%EF%BC%9A%0A%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%82%84%E5%8F%82%E8%80%83%E6%9B%B2%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E7%B4%8D%E6%9C%9F%EF%BC%9A%0A%E3%81%94%E4%BA%88%E7%AE%97%EF%BC%9A%0A%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7%EF%BC%9A%0A%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%81%94%E5%B8%8C%E6%9C%9B%EF%BC%9A%0A%0A%E2%80%BB%E6%9C%AA%E5%AE%9A%E3%81%AE%E9%A0%85%E7%9B%AE%E3%81%AF%E7%A9%BA%E6%AC%84%E3%81%A7%E6%A7%8B%E3%81%84%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82">メールで相談する</a>
+        <a href="#inquiry">相談テンプレートを見る</a>
+      </div>
 
-    </div>
+      <div class="commission-details">
+        <h3>ご相談いただけること</h3>
+        <p>既存曲の編曲もご相談いただけます。ご希望の編成や用途をお聞かせください。</p>
+        <p>ファンタジー、温かい日常、教会を思わせる神聖な雰囲気など。掲載楽曲を参考に、作品の世界観や使いたい場面をお聞かせください。</p>
+        <dl class="commission-specs">
+          <div><dt>制作・納品</dt><dd>ソフトウェア音源による制作。完成音源をWAVで納品し、ご希望に応じてMP3もお渡しします。ループ仕様は事前にご相談ください。</dd></div>
+          <div><dt>納期</dt><dd>ご依頼内容と制作状況を確認し、着手前に合意します。余裕をもってご相談ください。短納期のご依頼は、お受けできない場合があります。</dd></div>
+          <div><dt>修正</dt><dd>ラフ段階で方向性を確認し、完成後の軽微な修正は2回まで基本料金に含みます。軽微な修正は、音量バランスや一部の楽器の調整などです。ラフ承認後の曲調・メロディの全面変更、尺の大幅変更は、追加料金と納期を相談してから対応します。</dd></div>
+        </dl>
+      </div>
 
-    <div class="commission-details">
-        <h3>制作について</h3>
-        <p>
-        楽曲の長さ、編成、納期、修正回数などは
-        ご依頼内容に応じてご相談させていただきます。
-        </p>
-        <p>
-        著作権の取り扱いや利用範囲についても、
-        制作前に確認いたします。
-        </p>
-    </div>
+      <div class="commission-block">
+        <h3>ご相談から納品まで</h3>
+        <ol class="commission-flow">
+          <li><h4>お問い合わせ</h4><p>用途やイメージ、ご希望を伺います。まだ内容が固まっていなくても大丈夫です。</p></li>
+          <li><h4>内容確認・お見積もり</h4><p>曲の長さ・編成・納期・利用範囲・修正範囲・支払い条件を確認します。条件に合意するまでは制作を始めません。</p></li>
+          <li><h4>ラフ制作・方向性の確認</h4><p>短い試聴音源などで、曲調・メロディ・主要な楽器のイメージをすり合わせます。</p></li>
+          <li><h4>本制作・最終確認</h4><p>確認した方向性で楽曲を仕上げ、必要な調整を行います。</p></li>
+          <li><h4>お支払い・納品</h4><p>着手前に取り決めた方法と時期に沿って、お支払い・完成音源の納品を行います。</p></li>
+        </ol>
+      </div>
 
-    
-    <div class="commission-contact">
-    <p>まずはお気軽にご相談ください。</p>
+      <div class="commission-block commission-terms">
+        <h3>利用範囲とお取引について</h3>
+        <ul>
+          <li>商用・非商用を問わずご相談いただけます。使用する作品・媒体・用途を事前にお知らせください。</li>
+          <li>著作権の譲渡は基本料金に含みません。クレジット表記、音源の加工、別作品への使用などの条件は制作前に確認します。</li>
+          <li>制作実績としての掲載可否や公開時期は、事前にご相談します。</li>
+          <li>お支払いの金額・方法・時期は、お見積もり時にご案内します。</li>
+          <li>着手後のキャンセルは、進行状況に応じた制作費が発生します。計算方法・精算方法は、着手前にご案内し、合意した内容に従います。</li>
+        </ul>
+      </div>
 
-    <a
-        class="contact-button"
-        href="mailto:soundlantern.music@gmail.com?subject=SoundLantern%20楽曲制作のご相談"
-    >
-        Contact Me →
-    </a>
+      <div class="commission-block inquiry-guide" id="inquiry">
+        <h3>お問い合わせの際に</h3>
+        <p>以下を分かる範囲でお知らせください。未定の項目は空欄で構いません。</p>
+        <pre id="inquiry-template">ご依頼者名／団体名：
+作品の概要・音楽の使用用途：
+希望する曲数と長さ：
+イメージや参考曲：
+希望納期：
+ご予算：
+ループの必要性：
+その他のご希望：
 
-        <div class="contact-email">
-            <span>またはメールで直接</span>
-            <button
-            type="button"
-            id="copy-email"
-            data-email="soundlantern.music@gmail.com"
-            >
-            soundlantern.music@gmail.com
-            <span class="copy-icon">⧉</span>
-            </button>
+※未定の項目は空欄で構いません。</pre>
+        <button type="button" class="template-button" id="copy-template">相談テンプレートをコピー</button>
+        <p id="template-message" class="copy-status" role="status"></p>
+        <div class="commission-contact">
+          <a class="contact-button" href="mailto:soundlantern.music@gmail.com?subject=SoundLantern%20%E6%A5%BD%E6%9B%B2%E5%88%B6%E4%BD%9C%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=%E3%81%94%E4%BE%9D%E9%A0%BC%E8%80%85%E5%90%8D%EF%BC%8F%E5%9B%A3%E4%BD%93%E5%90%8D%EF%BC%9A%0A%E4%BD%9C%E5%93%81%E3%81%AE%E6%A6%82%E8%A6%81%E3%83%BB%E9%9F%B3%E6%A5%BD%E3%81%AE%E4%BD%BF%E7%94%A8%E7%94%A8%E9%80%94%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E3%81%99%E3%82%8B%E6%9B%B2%E6%95%B0%E3%81%A8%E9%95%B7%E3%81%95%EF%BC%9A%0A%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%82%84%E5%8F%82%E8%80%83%E6%9B%B2%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E7%B4%8D%E6%9C%9F%EF%BC%9A%0A%E3%81%94%E4%BA%88%E7%AE%97%EF%BC%9A%0A%E3%83%AB%E3%83%BC%E3%83%97%E3%81%AE%E5%BF%85%E8%A6%81%E6%80%A7%EF%BC%9A%0A%E3%81%9D%E3%81%AE%E4%BB%96%E3%81%AE%E3%81%94%E5%B8%8C%E6%9C%9B%EF%BC%9A%0A%0A%E2%80%BB%E6%9C%AA%E5%AE%9A%E3%81%AE%E9%A0%85%E7%9B%AE%E3%81%AF%E7%A9%BA%E6%AC%84%E3%81%A7%E6%A7%8B%E3%81%84%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82">メールで相談する</a>
+          <p class="commission-note">メールアプリが開きます。テンプレートを入力した状態で相談を始められます。</p>
+          <div class="contact-email">
+            <span>メールが開かない場合はこちら</span>
+            <button type="button" id="copy-email" data-email="soundlantern.music@gmail.com" aria-label="メールアドレスをコピー">soundlantern.music@gmail.com <span class="copy-icon" aria-hidden="true">⧉</span></button>
             <p id="copy-message" aria-live="polite"></p>
+          </div>
         </div>
-    </div>
-
-
+      </div>
     </section>
 
   </main>
 
 
-<!-- Music Detail Modal -->
-<dialog id="music-modal" class="music-modal">
-  <button class="modal-close" type="button"
-          aria-label="閉じる">×</button>
-
-  <div class="modal-artwork"></div>
-
-  <div class="modal-content">
-    <p class="modal-label">SOUNDLANTERN / SELECTED WORKS</p>
-    <h2 id="modal-title"></h2>
-    <p id="modal-genre" class="modal-genre"></p>
-    <p id="modal-description"></p>
-
-    <audio id="modal-audio" controls preload="none"></audio>
-  </div>
-</dialog>
-
-
-  <footer>
+<footer>
     <p>© 2026 SoundLantern</p>
   </footer>
 
